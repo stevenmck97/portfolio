@@ -1,32 +1,104 @@
 .Projects {
-    display: flex;
-    flex-direction: column;
-    margin: 15%;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 15%;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 5%;
+  border-bottom: 1px solid #333333;
 }
 
-.Projects h1  {
-    font-size: 32px;
-    margin: 0;
-    padding-bottom: 25px;
-
+.Projects h1 {
+  font-size: 32px;
+  margin: 0;
+  padding-bottom: 25px;
 }
 
 .projects_container {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
-.project-card {
-    /* background-color: #fff; */
-    /* border: 1px solid #e1e4e8; */
-    border-radius: 6px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    margin-bottom: 16px;
-    /* padding: 16px; */
-    width: 400px;
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  /* color: rgb(9, 141, 189); */
+  /* border: 1px solid rgb(9, 141, 189); */
 }
 
+.card-img {
+  /* background-color: #fff; */
+  /* border: 1px solid #e1e4e8; */
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  /* margin-bottom: 16px; */
+  /* padding: 16px; */
+  width: 400px;
+  height: 202px;
+  inset: 10px;
+}
+
+.card-img:hover {
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  transition-delay: 100ms;
+  width: 420px;
+}
+
+.project-icon {
+  width: 40px;
+  margin: 0 20px 16px 20px;
+}
+
+.project-icon:hover {
+  width: 50px;
+  transition-delay: 50ms;
+  cursor: pointer;
+}
+
+/* new card*/
+
+.details {
+  display: none;
+  position: absolute;
+  padding: 20px 10px;
+  animation: slideIn 0.5s ease-in-out alternate;
+  width: 400px;
+  height: 160px;
+  background-color: #a0a0a0;
+}
+.details > h3 {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 18px;
+  margin: 10px 0 15px 0;
+}
+.details > p {
+  color: #a0a0a0;
+  font-size: 15px;
+  line-height: 30px;
+  font-weight: 400;
+  color: white;
+}
+
+/* .card:hover .details {
+  display: inline-block;
+} */
+
+.active {
+  display: inline-block;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(100%) scale(0.5);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
